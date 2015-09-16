@@ -69,3 +69,4 @@ define(["jquery","Hammer","hammerify","Velocity","easing"],function($,Hammer,ham
   //     { duration: 800, easing: [60, 10] });
   // });
 });
+});

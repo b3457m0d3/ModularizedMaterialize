@@ -1,4 +1,4 @@
-define(["jquery"], function ($) {
+define(["jquery","Velocity"], function ($,velocity) {
 
   var methods = {
     init : function() {
@@ -123,7 +123,4 @@ define(["jquery"], function ($) {
     }
   };
 
-  $(document).ready(function(){
-    $('ul.tabs').tabs();
-  });
 });

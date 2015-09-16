@@ -1,4 +1,4 @@
-define(["jquery","velocity"], function ($,velocity) {
+define(["jquery","Velocity"], function ($,velocity) {
 
   var methods = {
     init : function(options) {

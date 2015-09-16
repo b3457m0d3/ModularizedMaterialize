@@ -1,4 +1,4 @@
-define(["jquery"], function ($) {
+define(["jquery","Velocity","easing"], function ($,velocity) {
   $.fn.collapsible = function(options) {
     var defaults = { accordion: undefined };
     options = $.extend(defaults, options);

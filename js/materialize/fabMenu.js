@@ -1,9 +1,7 @@
-define(["jquery","velocity"], function ($,velocity) {
-  require(["domReady!"],function(doc) {
-    $.fn.reverse = [].reverse;
-    $(doc).on('mouseenter.fixedActionBtn', '.fixed-action-btn', function(e) { openFABMenu($(this)); });
-    $(doc).on('mouseleave.fixedActionBtn', '.fixed-action-btn', function(e) { closeFABMenu($(this)); });
-  });
+define(["jquery","Velocity"], function ($,velocity) {
+  $.fn.reverse = [].reverse;
+  $(document).on('mouseenter.fixedActionBtn', '.fixed-action-btn', function(e) { openFABMenu($(this)); });
+  $(document).on('mouseleave.fixedActionBtn', '.fixed-action-btn', function(e) { closeFABMenu($(this)); });
   $.fn.extend({
     openFAB: function() { openFABMenu($(this)); },
     closeFAB: function() { closeFABMenu($(this)); }

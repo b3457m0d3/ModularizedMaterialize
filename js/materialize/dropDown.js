@@ -1,4 +1,4 @@
-define(["jquery","easing"],function ($) {
+define(["jquery","Velocity","easing"],function ($,velocity) {
   $.fn.scrollTo = function(elem) {
     $(this).scrollTop($(this).scrollTop() - $(this).offset().top + $(elem).offset().top);
     return this;

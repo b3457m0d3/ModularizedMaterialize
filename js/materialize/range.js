@@ -1,4 +1,4 @@
-define(["jquery","velocity","domReady!"],function($,velocity,doc){
+define(["jquery","Velocity","domReady!"],function($,Velocity,doc){
   var range_type = 'input[type=range]', range_mousedown = false, left;
   $(range_type).each(function () {
     var thumb = $('<span class="thumb"><span class="value"></span></span>');

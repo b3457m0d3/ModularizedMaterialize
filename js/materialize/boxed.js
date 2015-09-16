@@ -1,4 +1,4 @@
-define(["jquery","velocity"],function ($,velocity) {
+define(["jquery","Velocity"],function ($,velocity) {
   $.fn.materialbox = function () {
     return this.each(function() {
       if ($(this).hasClass('initialized')) return;

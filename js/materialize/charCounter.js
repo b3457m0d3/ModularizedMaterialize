@@ -29,7 +29,4 @@ define(["jquery"], function ($) {
       $input.removeClass('valid').addClass('invalid');
     }
   }
-  $(document).ready(function(){
-    $('input, textarea').characterCounter();
-  });
 });

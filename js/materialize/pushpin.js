@@ -1,5 +1,4 @@
-define(["jquery"],function ($) {
-  $(document).ready(function() {
+define(["jquery","Materialize"],function ($,Materialize) {
 
     $.fn.pushpin = function (options) {
 
@@ -56,7 +55,4 @@ define(["jquery"],function ($) {
       });
 
     };
-
-
-  });
 });

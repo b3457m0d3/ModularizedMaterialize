@@ -1,4 +1,4 @@
-define(["jquery","easing","easingCustom","velocity"], function ($,velocity) {
+define(["jquery","Velocity","easing"], function ($,velocity) {
   $(document).ready(function() {
     $(document).on('click.card', '.card', function (e) {
       if ($(this).find('> .card-reveal').length) {

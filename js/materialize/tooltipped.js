@@ -1,4 +1,4 @@
-define(["jquery"],function ($) {
+define(["jquery","Velocity"],function ($,velocity) {
     $.fn.tooltip = function (options) {
         var timeout = null,
         counter = null,
@@ -170,8 +170,4 @@ define(["jquery"],function ($) {
         });
     });
   };
-
-  $(document).ready(function(){
-     $('.tooltipped').tooltip();
-   });
 });

@@ -3,7 +3,7 @@ require.config({
   locale: "en_ca",
   paths:{
    /*[Frameworks]==================================================================================*/
-    "jquery"       : "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min",
+    "jquery"       : "https:cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min",
     "domReady"     : "domReady",
     "Materialize"  : "materialize",
     "Hammer"       : "Hammer",
@@ -32,30 +32,53 @@ require.config({
     "select"       : "materialize/select",
     "sideNav"      : "materialize/sideNav",
     "slider"       : "materialize/slider",
-    "staggeredList": "materialize/staggeredList",
+    "dismissable"  : "materialize/dismissable",
     "tabs"         : "materialize/tabs",
     "textarea"     : "materialize/textarea",
     "tooltipped"   : "materialize/tooltipped",
     "Waves"        : "materialize/Waves",
   },
   shim: {
-    "velocity"     : ["jquery"],
-    "velocity-ui"  : ["velocity"]
+    "Velocity"     : ["jquery"],
+    "velocity-ui"  : ["Velocity"]
   }
 });
 require(["Materialize"], function(Materialize){
-  require(["domReady!","boxed","card","charCounter","collapsible","datePicker","dropDown","fabMenu","fileInput","form","modal","noUiSlider",
-    "parallax","picker","pushpin","range","scrollSpy","select","sideNav","slider","staggeredList","tabs","textarea","tooltipped"], function(doc){
+  require([
+    "domReady!",
+    "noUiSlider",
+    "boxed",
+    "card",
+    "charCounter",
+    "collapsible",
+    "datePicker",
+    "dismissable",
+    "dropDown",
+    "fabMenu",
+    "fileInput",
+    "form",
+    "modal",
+    "parallax",
+    "pushpin",
+    "range",
+    "scrollSpy",
+    "select",
+    "sideNav",
+    "slider",
+    "tabs",
+    "textarea",
+    "tooltipped"
+  ], function(doc,noUiSlider){
     Materialize.Waves();
     Materialize.toast('I am a toast!', 4000);
     Materialize.scrollFire([{selector: '#ScrollFireTest', offset: 50, callback: 'Materialize.toast("This is our ScrollFire Demo!", 1500 )' }]);
     $('.materialboxed').materialbox();
+    $('input, textarea').characterCounter();
     $('.collapsible').collapsible({ accordion : false });
     $('.datepicker').pickadate({ selectMonths: true, selectYears: 15 });
     $('.dropdown-button').dropdown();
     $('.modal-trigger').leanModal();
-    var slider = doc.getElementById('range-input');
-    noUiSlider.create($("#range-input"), { start: [50], step: 1, range: { 'min': 0, 'max': 100 }, format: wNumb({ decimals: 0 }) });
+    noUiSlider.create($("#range-input")[0], { start: [50], step: 1, range: { 'min': 0, 'max': 100 }, format: wNumb({ decimals: 0 }) });
     $('.button-collapse').sideNav();
     $('ul.tabs').tabs();
     $('.tooltipped').tooltip({delay: 50});

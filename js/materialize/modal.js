@@ -1,4 +1,4 @@
-define(["jquery","velocity"], function($,velocity) {
+define(["jquery","Velocity"], function($,velocity) {
   var _stack = 0, _lastID = 0, _generateID = function() {
     _lastID++;
     return 'materialize-lean-overlay-' + _lastID;
