@@ -50,28 +50,14 @@ require(["Materialize"], function(Materialize){
     Materialize.toast('I am a toast!', 4000);
     Materialize.scrollFire([{selector: '#ScrollFireTest', offset: 50, callback: 'Materialize.toast("This is our ScrollFire Demo!", 1500 )' }]);
     $('.materialboxed').materialbox();
-    $('.collapsible').collapsible({
-      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-    });
+    $('.collapsible').collapsible({ accordion : false });
+    $('.datepicker').pickadate({ selectMonths: true, selectYears: 15 });
+    $('.dropdown-button').dropdown();
+    $('.modal-trigger').leanModal();
+    var slider = doc.getElementById('range-input');
+    noUiSlider.create($("#range-input"), { start: [50], step: 1, range: { 'min': 0, 'max': 100 }, format: wNumb({ decimals: 0 }) });
     $('.button-collapse').sideNav();
     $('ul.tabs').tabs();
-    $('.modal-trigger').leanModal();
-    $('.dropdown-button').dropdown();
     $('.tooltipped').tooltip({delay: 50});
-    $('select').material_select();
-
-
-    var slider = doc.getElementById('range-input');
-    noUiSlider.create(slider, {
-     start: [50],
-     step: 1,
-     range: {
-       'min': 0,
-       'max': 100
-     },
-     format: wNumb({
-       decimals: 0
-     })
-    });
 	});
 });
